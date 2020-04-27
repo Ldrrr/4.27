@@ -1,1 +1,18 @@
-
+int getDecimalValue(struct ListNode* head)
+{
+	int k=0,s=0;
+	struct ListNode* p=head;
+	while(p)
+	{
+		k++;
+		p=p->next; 
+	}
+	p=head;
+	while(p)
+	{
+		s+=p->val*pow(2,k-1);
+		k--;
+		p=p->next;
+	}
+	return s;
+}
